@@ -33,7 +33,7 @@
 body {
     font-family: 'Open Sans', sans-serif;
     color      : #212529;
-    overflow-x : hidden;
+    /* overflow-x : hidden; */
 }
 
 
@@ -720,9 +720,6 @@ header {
 }
 
 
-
-
-
 /* ///////////blog section//////////// */
 .card img {
     transition        : all 0.5s ease-in-out;
@@ -817,6 +814,9 @@ header {
     .card-top h3 {
         font-size: 3rem;
     }
+    body{
+        overflow-x: hidden;
+    }
 }
 
 @media (max-width: 768px) {
@@ -827,5 +827,20 @@ header {
         -moz-transform   : translateX(-50%);
         -ms-transform    : translateX(-50%);
         -o-transform     : translateX(-50%);
+    }
+    .title{
+        margin-bottom: 1rem;
+    }
+    .title h2 {
+        font-size: 2.5rem;
+    }
+    
+    .title h3 {
+        margin-bottom: 0;
+        font-size: 1.5rem;
+    }
+     .title-txt{
+        margin-bottom: 0;
+        font-size: 0.875rem;
     }
 }
