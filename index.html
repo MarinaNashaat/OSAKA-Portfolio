@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="plugins/OwlCarousel2-2.3.4/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="plugins/OwlCarousel2-2.3.4/css/owl.theme.default.min.css">
   <link rel="stylesheet" href="css/style.css">
 
 
@@ -15,7 +17,7 @@
 
 <body>
   <!-- navigation bar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
+  <nav id="main-nav" class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand text-uppercase" href="#">Osaka</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -79,7 +81,7 @@
         <i class="fab fa-twitter"></i>
       </div>
     </div>
-    <a href="#about-me"
+    <a href="#about-me" id="mouseScroll"
       class="scroll-down position-absolute start-50 translate-middle-x rounded-pill d-md-flex justify-content-center align-items-center d-none">
       <span class="dott position-absolute start-50 translate-middle-x rounded-circle"></span>
     </a>
@@ -139,9 +141,13 @@
             <span class="progress-right end-0 position-absolute top-0 w-50 h-100 overflow-hidden">
               <span class="progress-bar w-100 h-100 position-absolute top-0 end-100 border-end-0"></span>
             </span>
-            <div class="progress-value bg-black text-white translate-middle position-absolute top-50 start-50 text-center">
+            <div
+              class="progress-value bg-black text-white translate-middle position-absolute top-50 start-50 text-center">
               <h6 class="mb-0 mt-2 text-uppercase">HTML/CSS </h6>
-              <p class="mb-0">93% </p>
+              <p class="mb-0">
+                <span class="counter"> 93 </span>
+                %
+              </p>
             </div>
           </div>
         </div>
@@ -153,9 +159,13 @@
             <span class="progress-right end-0 position-absolute top-0 w-50 h-100 overflow-hidden">
               <span class="progress-bar w-100 h-100 position-absolute top-0 end-100 border-end-0"></span>
             </span>
-            <div class="progress-value bg-black text-white translate-middle position-absolute top-50 start-50 text-center">
+            <div
+              class="progress-value bg-black text-white translate-middle position-absolute top-50 start-50 text-center">
               <h6 class="mb-0 mt-2 text-uppercase">javascript </h6>
-              <p class="mb-0">88% </p>
+              <p class="mb-0">
+                <span class="counter"> 88 </span>
+                % 
+              </p>
             </div>
           </div>
         </div>
@@ -167,9 +177,13 @@
             <span class="progress-right end-0 position-absolute top-0 w-50 h-100 overflow-hidden">
               <span class="progress-bar w-100 h-100 position-absolute top-0 end-100 border-end-0"></span>
             </span>
-            <div class="progress-value bg-black text-white translate-middle position-absolute top-50 start-50 text-center">
+            <div
+              class="progress-value bg-black text-white translate-middle position-absolute top-50 start-50 text-center">
               <h6 class="mb-0 mt-2 text-uppercase">php </h6>
-              <p class="mb-0">95% </p>
+              <p class="mb-0">
+                <span class="counter"> 95</span>
+                %
+               </p>
             </div>
           </div>
         </div>
@@ -181,15 +195,19 @@
             <span class="progress-right end-0 position-absolute top-0 w-50 h-100 overflow-hidden">
               <span class="progress-bar w-100 h-100 position-absolute top-0 end-100 border-end-0"></span>
             </span>
-            <div class="progress-value bg-black text-white translate-middle position-absolute top-50 start-50 text-center">
+            <div
+              class="progress-value bg-black text-white translate-middle position-absolute top-50 start-50 text-center">
               <h6 class="mb-0 mt-2 text-uppercase">wordpress </h6>
-              <p class="mb-0">89% </p>
+              <p class="mb-0">
+                <span class="counter"> 89 </span>
+                %
+               </p>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section> 
+  </section>
 
 
 
@@ -282,283 +300,143 @@
       <h3 class="text-uppercase mb-0 position-absolute text-black">portfolio</h3>
     </div>
     <p class="text-center title-txt mb-5 text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-    <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
-      <li class="nav-item" role="presentation">
-        <a class="nav-link active text-uppercase" id="all-tab" data-bs-toggle="tab" data-bs-target="#all" role="tab"
-          aria-controls="all" aria-selected="true">All</a>
+    <ul class="nav filter nav-tabs justify-content-center">
+      <li class="nav-item filter-item">
+        <a class="nav-link filter-link active text-uppercase" data-filter="*">All</a>
       </li>
-      <li class="nav-item" role="presentation">
-        <a class="nav-link text-uppercase" id="dev-tab" data-bs-toggle="tab" data-bs-target="#dev" role="tab"
-          aria-controls="dev" aria-selected="false">dev</a>
+      <li class="nav-item filter-item">
+        <a class="nav-link filter-link text-uppercase" data-filter=".dev">dev</a>
       </li>
-      <li class="nav-item" role="presentation">
-        <a class="nav-link text-uppercase" id="web-tab" data-bs-toggle="tab" data-bs-target="#web" role="tab"
-          aria-controls="web" aria-selected="false">web</a>
+      <li class="nav-item filter-item">
+        <a class="nav-link filter-link text-uppercase" data-filter=".web">web</a>
       </li>
-      <li class="nav-item" role="presentation">
-        <a class="nav-link text-uppercase" id="design-tab" data-bs-toggle="tab" data-bs-target="#design" role="tab"
-          aria-controls="design" aria-selected="false">design</a>
+      <li class="nav-item filter-item">
+        <a class="nav-link filter-link text-uppercase" data-filter=".des">design</a>
       </li>
     </ul>
-    <div class="tab-content mt-5" id="myTabContent">
-      <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
-        <div class="container-fluid">
-          <div class="row gy-5">
-            <div class="col-md-4">
-              <div class="project-item position-relative overflow-hidden">
-                <div class="project-img">
-                  <img src="images/portfolio/1.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="project-overlay position-absolute">
-                  <div class="overlay-info text-center position-absolute translate-middle top-50 start-50">
-                    <h5 class="text-black">Creative Design</h5>
-                    <h6 class="text-black mb-3">Picture</h6>
-                    <a href="#" class="p-1 mx-2 text-center rounded-circle text-decoration-none d-inline-block">
-                      <i class="fas fa-search-plus"></i>
-                    </a>
-                    <a href="#" class="p-1 mx-2 text-center rounded-circle text-decoration-none d-inline-block">
-                      <i class="fas fa-link"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
+    <div class="container mt-5">
+      <div class="row gy-5 portfolio-container">
+        <div class="col-md-4 portfolio-box des">
+          <div class="project-item position-relative overflow-hidden">
+            <div class="project-img">
+              <img src="images/portfolio/1.jpg" class="img-fluid" alt="">
             </div>
-            <div class="col-md-4">
-              <div class="project-item position-relative overflow-hidden">
-                <div class="project-img">
-                  <img src="images/portfolio/2.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="project-overlay position-absolute">
-                  <div class="overlay-info text-center position-absolute translate-middle top-50 start-50">
-                    <h5 class="text-black text-uppercase">APP DESIGN </h5>
-                    <h6 class="text-black mb-3 text-uppercase">Video</h6>
-                    <a href="#" class="p-1 mx-2 text-center rounded-circle text-decoration-none d-inline-block">
-                      <i class="fas fa-play"></i>
-                    </a>
-                    <a href="#" class="p-1 mx-2 text-center rounded-circle text-decoration-none d-inline-block">
-                      <i class="fas fa-link"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="project-item position-relative overflow-hidden">
-                <div class="project-img">
-                  <img src="images/portfolio/3.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="project-overlay position-absolute">
-                  <div class="overlay-info text-center position-absolute translate-middle top-50 start-50">
-                    <h5 class="text-black">BRANDING</h5>
-                    <h6 class="text-black mb-3">Picture</h6>
-                    <a href="#" class="p-1 mx-2 text-center rounded-circle text-decoration-none d-inline-block">
-                      <i class="fas fa-search-plus"></i>
-                    </a>
-                    <a href="#" class="p-1 mx-2 text-center rounded-circle text-decoration-none d-inline-block">
-                      <i class="fas fa-link"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="project-item position-relative overflow-hidden">
-                <div class="project-img">
-                  <img src="images/portfolio/4.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="project-overlay position-absolute">
-                  <div class="overlay-info text-center position-absolute translate-middle top-50 start-50">
-                    <h5 class="text-black">web develop</h5>
-                    <h6 class="text-black mb-3">video</h6>
-                    <a href="#" class="p-1 mx-2 text-center rounded-circle text-decoration-none d-inline-block">
-                      <i class="fas fa-play"></i>
-                    </a>
-                    <a href="#" class="p-1 mx-2 text-center rounded-circle text-decoration-none d-inline-block">
-                      <i class="fas fa-link"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="project-item position-relative overflow-hidden">
-                <div class="project-img">
-                  <img src="images/portfolio/5.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="project-overlay position-absolute">
-                  <div class="overlay-info text-center position-absolute translate-middle top-50 start-50">
-                    <h5 class="text-black">3d model</h5>
-                    <h6 class="text-black mb-3">Picture</h6>
-                    <a href="#" class="p-1 mx-2 text-center rounded-circle text-decoration-none d-inline-block">
-                      <i class="fas fa-search-plus"></i>
-                    </a>
-                    <a href="#" class="p-1 mx-2 text-center rounded-circle text-decoration-none d-inline-block">
-                      <i class="fas fa-link"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="project-item position-relative overflow-hidden">
-                <div class="project-img">
-                  <img src="images/portfolio/6.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="project-overlay position-absolute">
-                  <div class="overlay-info text-center position-absolute translate-middle top-50 start-50">
-                    <h5 class="text-black">app develop</h5>
-                    <h6 class="text-black mb-3">Picture</h6>
-                    <a href="#" class="p-1 mx-2 text-center rounded-circle text-decoration-none d-inline-block">
-                      <i class="fas fa-search-plus"></i>
-                    </a>
-                    <a href="#" class="p-1 mx-2 text-center rounded-circle text-decoration-none d-inline-block">
-                      <i class="fas fa-link"></i>
-                    </a>
-                  </div>
-                </div>
+            <div class="project-overlay position-absolute">
+              <div class="overlay-info text-center position-absolute translate-middle top-50 start-50">
+                <h5 class="text-black">Creative Design</h5>
+                <h6 class="text-black mb-3">Picture</h6>
+                <a href="#" class="p-1 mx-2 text-center rounded-circle text-decoration-none d-inline-block">
+                  <i class="fas fa-search-plus"></i>
+                </a>
+                <a href="#" class="p-1 mx-2 text-center rounded-circle text-decoration-none d-inline-block">
+                  <i class="fas fa-link"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="tab-pane fade" id="dev" role="tabpanel" aria-labelledby="dev-tab">
-        <div class="container-fluid">
-          <div class="row gy-5">
-            <div class="col-md-4">
-              <div class="project-item position-relative overflow-hidden">
-                <div class="project-img">
-                  <img src="images/portfolio/4.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="project-overlay position-absolute">
-                  <div class="overlay-info text-center position-absolute translate-middle top-50 start-50">
-                    <h5 class="text-black">web develop</h5>
-                    <h6 class="text-black mb-3">video</h6>
-                    <a href="#" class="p-1 mx-2 text-center rounded-circle text-decoration-none d-inline-block">
-                      <i class="fas fa-play"></i>
-                    </a>
-                    <a href="#" class="p-1 mx-2 text-center rounded-circle text-decoration-none d-inline-block">
-                      <i class="fas fa-link"></i>
-                    </a>
-                  </div>
-                </div>
+        <div class="col-md-4 portfolio-box des">
+          <div class="project-item position-relative overflow-hidden">
+            <div class="project-img">
+              <img src="images/portfolio/2.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="project-overlay position-absolute">
+              <div class="overlay-info text-center position-absolute translate-middle top-50 start-50">
+                <h5 class="text-black text-uppercase">APP DESIGN </h5>
+                <h6 class="text-black mb-3 text-uppercase">Video</h6>
+                <a href="#" class="p-1 mx-2 text-center rounded-circle text-decoration-none d-inline-block">
+                  <i class="fas fa-play"></i>
+                </a>
+                <a href="#" class="p-1 mx-2 text-center rounded-circle text-decoration-none d-inline-block">
+                  <i class="fas fa-link"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
-
-      </div>
-      <div class="tab-pane fade" id="web" role="tabpanel" aria-labelledby="web-tab">
-        <div class="container-fluid">
-          <div class="row gy-5">
-            <div class="col-md-4">
-              <div class="project-item position-relative overflow-hidden">
-                <div class="project-img">
-                  <img src="images/portfolio/6.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="project-overlay position-absolute">
-                  <div class="overlay-info text-center position-absolute translate-middle top-50 start-50">
-                    <h5 class="text-black">app develop</h5>
-                    <h6 class="text-black mb-3">Picture</h6>
-                    <a href="#" class="p-1 mx-2 text-center rounded-circle text-decoration-none d-inline-block">
-                      <i class="fas fa-search-plus"></i>
-                    </a>
-                    <a href="#" class="p-1 mx-2 text-center rounded-circle text-decoration-none d-inline-block">
-                      <i class="fas fa-link"></i>
-                    </a>
-                  </div>
-                </div>
+        <div class="col-md-4 portfolio-box des">
+          <div class="project-item position-relative overflow-hidden">
+            <div class="project-img">
+              <img src="images/portfolio/3.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="project-overlay position-absolute">
+              <div class="overlay-info text-center position-absolute translate-middle top-50 start-50">
+                <h5 class="text-black">BRANDING</h5>
+                <h6 class="text-black mb-3">Picture</h6>
+                <a href="#" class="p-1 mx-2 text-center rounded-circle text-decoration-none d-inline-block">
+                  <i class="fas fa-search-plus"></i>
+                </a>
+                <a href="#" class="p-1 mx-2 text-center rounded-circle text-decoration-none d-inline-block">
+                  <i class="fas fa-link"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="tab-pane fade" id="design" role="tabpanel" aria-labelledby="design-tab">
-        <div class="container-fluid">
-          <div class="row gy-5">
-            <div class="col-md-4">
-              <div class="project-item position-relative overflow-hidden">
-                <div class="project-img">
-                  <img src="images/portfolio/1.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="project-overlay position-absolute">
-                  <div class="overlay-info text-center position-absolute translate-middle top-50 start-50">
-                    <h5 class="text-black">Creative Design</h5>
-                    <h6 class="text-black mb-3">Picture</h6>
-                    <a href="#" class="p-1 mx-2 text-center rounded-circle text-decoration-none d-inline-block">
-                      <i class="fas fa-search-plus"></i>
-                    </a>
-                    <a href="#" class="p-1 mx-2 text-center rounded-circle text-decoration-none d-inline-block">
-                      <i class="fas fa-link"></i>
-                    </a>
-                  </div>
-                </div>
+        <div class="col-md-4 portfolio-box dev">
+          <div class="project-item position-relative overflow-hidden">
+            <div class="project-img">
+              <img src="images/portfolio/4.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="project-overlay position-absolute">
+              <div class="overlay-info text-center position-absolute translate-middle top-50 start-50">
+                <h5 class="text-black">web develop</h5>
+                <h6 class="text-black mb-3">video</h6>
+                <a href="#" class="p-1 mx-2 text-center rounded-circle text-decoration-none d-inline-block">
+                  <i class="fas fa-play"></i>
+                </a>
+                <a href="#" class="p-1 mx-2 text-center rounded-circle text-decoration-none d-inline-block">
+                  <i class="fas fa-link"></i>
+                </a>
               </div>
             </div>
-            <div class="col-md-4">
-              <div class="project-item position-relative overflow-hidden">
-                <div class="project-img">
-                  <img src="images/portfolio/2.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="project-overlay position-absolute">
-                  <div class="overlay-info text-center position-absolute translate-middle top-50 start-50">
-                    <h5 class="text-black text-uppercase">APP DESIGN </h5>
-                    <h6 class="text-black mb-3 text-uppercase">Video</h6>
-                    <a href="#" class="p-1 mx-2 text-center rounded-circle text-decoration-none d-inline-block">
-                      <i class="fas fa-play"></i>
-                    </a>
-                    <a href="#" class="p-1 mx-2 text-center rounded-circle text-decoration-none d-inline-block">
-                      <i class="fas fa-link"></i>
-                    </a>
-                  </div>
-                </div>
+          </div>
+        </div>
+        <div class="col-md-4 portfolio-box des">
+          <div class="project-item position-relative overflow-hidden">
+            <div class="project-img">
+              <img src="images/portfolio/5.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="project-overlay position-absolute">
+              <div class="overlay-info text-center position-absolute translate-middle top-50 start-50">
+                <h5 class="text-black">3d model</h5>
+                <h6 class="text-black mb-3">Picture</h6>
+                <a href="#" class="p-1 mx-2 text-center rounded-circle text-decoration-none d-inline-block">
+                  <i class="fas fa-search-plus"></i>
+                </a>
+                <a href="#" class="p-1 mx-2 text-center rounded-circle text-decoration-none d-inline-block">
+                  <i class="fas fa-link"></i>
+                </a>
               </div>
             </div>
-            <div class="col-md-4">
-              <div class="project-item position-relative overflow-hidden">
-                <div class="project-img">
-                  <img src="images/portfolio/3.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="project-overlay position-absolute">
-                  <div class="overlay-info text-center position-absolute translate-middle top-50 start-50">
-                    <h5 class="text-black">BRANDING</h5>
-                    <h6 class="text-black mb-3">Picture</h6>
-                    <a href="#" class="p-1 mx-2 text-center rounded-circle text-decoration-none d-inline-block">
-                      <i class="fas fa-search-plus"></i>
-                    </a>
-                    <a href="#" class="p-1 mx-2 text-center rounded-circle text-decoration-none d-inline-block">
-                      <i class="fas fa-link"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
+          </div>
+        </div>
+        <div class="col-md-4 portfolio-box web">
+          <div class="project-item position-relative overflow-hidden">
+            <div class="project-img">
+              <img src="images/portfolio/6.jpg" class="img-fluid" alt="">
             </div>
-            <div class="col-md-4">
-              <div class="project-item position-relative overflow-hidden">
-                <div class="project-img">
-                  <img src="images/portfolio/6.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="project-overlay position-absolute">
-                  <div class="overlay-info text-center position-absolute translate-middle top-50 start-50">
-                    <h5 class="text-black">app develop</h5>
-                    <h6 class="text-black mb-3">Picture</h6>
-                    <a href="#" class="p-1 mx-2 text-center rounded-circle text-decoration-none d-inline-block">
-                      <i class="fas fa-search-plus"></i>
-                    </a>
-                    <a href="#" class="p-1 mx-2 text-center rounded-circle text-decoration-none d-inline-block">
-                      <i class="fas fa-link"></i>
-                    </a>
-                  </div>
-                </div>
+            <div class="project-overlay position-absolute">
+              <div class="overlay-info text-center position-absolute translate-middle top-50 start-50">
+                <h5 class="text-black">app develop</h5>
+                <h6 class="text-black mb-3">Picture</h6>
+                <a href="#" class="p-1 mx-2 text-center rounded-circle text-decoration-none d-inline-block">
+                  <i class="fas fa-search-plus"></i>
+                </a>
+                <a href="#" class="p-1 mx-2 text-center rounded-circle text-decoration-none d-inline-block">
+                  <i class="fas fa-link"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section> 
+
+  </section>
 
   <!-- price section -->
-   <section id="price" class="py-5 bg-white text-center">
+  <section id="price" class="py-5 bg-white text-center">
     <div
       class="title text-center position-relative py-2 d-flex justify-content-center align-items-center mb-sm-3 mb-md-0">
       <h2 class="text-uppercase mb-0 title-color-light d-md-block ">price</h2>
@@ -635,7 +513,7 @@
   </section>
 
   <!-- counter section -->
-   <section id="counter" class="counter-section">
+  <section id="counter" class="counter-section">
     <div class="container">
       <div class="row">
         <div class="col-md-3">
@@ -676,21 +554,21 @@
         </div>
       </div>
     </div>
-  </section> 
+  </section>
 
   <!-- testimonial section -->
-   <section id="testimonial" class="py-5 bg-white text-center">
+  <section id="testimonial" class="py-5 bg-white text-center">
     <div
       class="title text-center position-relative py-2 d-flex justify-content-center align-items-center mb-sm-3 mb-md-0">
       <h2 class="text-uppercase mb-0 title-color-light d-md-block ">testimonials</h2>
       <h3 class="text-uppercase mb-0 position-absolute text-black">testimonials</h3>
     </div>
     <p class="text-center title-txt mb-5 text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-   <div class="container">
-    <div id="carouselExampleIndicators" class="carousel slide py-5" data-bs-ride="carousel" data-bs-interval="3000">
+    <div class="container">
+      <div id="carouselExampleIndicators" class="carousel slide py-5" data-bs-ride="carousel" data-bs-interval="3000">
 
-      <div class="carousel-inner py-5">
-        <div class="carousel-item active">
+        <div class="carousel-inner py-5">
+          <div class="carousel-item active">
             <div class="carousel-member  position-relative">
               <img src="images/testemonial/1.jpg" alt=""
                 class="rounded-circle translate-middle-y border border-2 border-white">
@@ -700,9 +578,9 @@
                 sapien congue tristique. Integer mollis auctor ultrices. Praesent vitae dapibus elit. Sed sit amet
                 tellus magna.</p>
             </div>
-          
-        </div>
-        <div class="carousel-item">
+
+          </div>
+          <div class="carousel-item">
             <div class="carousel-member position-relative">
               <img src="images/testemonial/2.jpg" alt=""
                 class="rounded-circle translate-middle-y border border-2 border-white">
@@ -712,9 +590,9 @@
                 sapien congue tristique. Integer mollis auctor ultrices. Praesent vitae dapibus elit. Sed sit amet
                 tellus magna.</p>
             </div>
-          
-        </div>
-        <div class="carousel-item">
+
+          </div>
+          <div class="carousel-item">
             <div class="carousel-member position-relative">
               <img src="images/testemonial/3.jpg" alt=""
                 class="rounded-circle translate-middle-y border border-2 border-white">
@@ -724,8 +602,8 @@
                 sapien congue tristique. Integer mollis auctor ultrices. Praesent vitae dapibus elit. Sed sit amet
                 tellus magna.</p>
             </div>
-        </div>
-        <div class="carousel-item">
+          </div>
+          <div class="carousel-item">
             <div class="carousel-member position-relative">
               <img src="images/testemonial/4.jpg" alt=""
                 class="rounded-circle translate-middle-y border border-2 border-white">
@@ -735,8 +613,8 @@
                 sapien congue tristique. Integer mollis auctor ultrices. Praesent vitae dapibus elit. Sed sit amet
                 tellus magna.</p>
             </div>
-        </div>
-        <div class="carousel-item">
+          </div>
+          <div class="carousel-item">
             <div class="carousel-member position-relative">
               <img src="images/testemonial/5.jpg" alt=""
                 class="rounded-circle translate-middle-y border border-2 border-white">
@@ -746,29 +624,29 @@
                 sapien congue tristique. Integer mollis auctor ultrices. Praesent vitae dapibus elit. Sed sit amet
                 tellus magna.</p>
             </div>
+          </div>
+
+
+        </div>
+        <div class="carousel-indicators ">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+            aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+            aria-label="Slide 5"></button>
         </div>
 
-
       </div>
-      <div class="carousel-indicators ">
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-          aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-          aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-          aria-label="Slide 3"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
-          aria-label="Slide 4"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
-          aria-label="Slide 5"></button>
-      </div>
-
     </div>
-   </div>
-  </section> 
+  </section>
 
   <!-- blog section -->
-   <section id="blog" class="py-5 bg-white">
+  <section id="blog" class="py-5 bg-white">
     <div
       class="title text-center position-relative py-2 d-flex justify-content-center align-items-center mb-sm-3 mb-md-0">
       <h2 class="text-uppercase mb-0 title-color-light d-md-block ">Blog</h2>
@@ -776,138 +654,151 @@
     </div>
     <p class="text-center title-txt mb-5 text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
     <div class="container">
-      <div class="row gy-5">
-        <div class="col-lg-3 col-md-6 ">
-          <div class="card shadow">
-            <div class="card-img  overflow-hidden">
-              <img src="images/blog/1.jpg" class="card-img-top" alt="">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="owl-carousel owl-theme owl-loaded">
+            <div class="owl-stage-outer">
+              <div class="owl-stage">
+                <div class="owl-item">
+                  <div class="card shadow">
+                    <div class="card-img  overflow-hidden">
+                      <img src="images/blog/1.jpg" class="card-img-top" alt="">
 
-            </div>
-            <div class="card-body p-4 position-relative">
-              <div class="card-icon position-absolute">
-                <a href="#"
-                  class="shadow position-absolute bg-white top-50 translate-middle rounded-circle p-3 text-center">
-                  <i class="fas fa-book-open"></i>
-                </a>
-              </div>
-              <h5 class="text-black">Morning Bike Ride</h5>
-              <div class="post-date mb-3">
-                <a href="#" class="text-osaka text-decoration-none">
-                  <i class="fas fa-calendar-alt me-2"></i>
+                    </div>
+                    <div class="card-body p-4 position-relative">
+                      <div class="card-icon position-absolute">
+                        <a href="#"
+                          class="shadow position-absolute bg-white top-50 translate-middle rounded-circle p-3 text-center">
+                          <i class="fas fa-book-open"></i>
+                        </a>
+                      </div>
+                      <h5 class="text-black">Morning Bike Ride</h5>
+                      <div class="post-date mb-3">
+                        <a href="#" class="text-osaka text-decoration-none">
+                          <i class="fas fa-calendar-alt me-2"></i>
 
-                  14 May 2018
-                </a>
-                <a href="#" class="text-osaka  text-decoration-none">
-                  <i class="fas fa-user me-2"></i>
-                  Robin
-                </a>
+                          14 May 2018
+                        </a>
+                        <a href="#" class="text-osaka  text-decoration-none">
+                          <i class="fas fa-user me-2"></i>
+                          Robin
+                        </a>
+                      </div>
+                      <p class="card-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget est sit amet sapien
+                        congue
+                        tristique. Integer mollis auctor ultrices. Praesent vitae dapibus elit ... </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="owl-item">
+                  <div class="card shadow">
+                    <div class="card-img  overflow-hidden">
+                      <img src="images/blog/2.jpg" class="card-img-top" alt="">
+
+                    </div>
+                    <div class="card-body p-4 position-relative">
+                      <div class="card-icon position-absolute">
+                        <a href="#"
+                          class="shadow position-absolute bg-white top-50 translate-middle rounded-circle p-3 text-center">
+                          <i class="fas fa-book-open"></i>
+                        </a>
+                      </div>
+                      <h5 class="text-black">Hard Working</h5>
+                      <div class="post-date mb-3">
+                        <a href="#" class="text-osaka text-decoration-none">
+                          <i class="fas fa-calendar-alt me-2"></i>
+
+                          08 June 2018
+                        </a>
+                        <a href="#" class="text-osaka  text-decoration-none">
+                          <i class="fas fa-user me-2"></i>
+                          Robin
+                        </a>
+                      </div>
+                      <p class="card-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget est sit amet sapien
+                        congue
+                        tristique. Integer mollis auctor ultrices. Praesent vitae dapibus elit ... </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="owl-item">
+                  <div class="card shadow">
+                    <div class="card-img  overflow-hidden">
+                      <img src="images/blog/3.jpg" class="card-img-top" alt="">
+
+                    </div>
+                    <div class="card-body p-4 position-relative">
+                      <div class="card-icon position-absolute">
+                        <a href="#"
+                          class="shadow position-absolute bg-white top-50 translate-middle rounded-circle p-3 text-center">
+                          <i class="fas fa-book-open"></i>
+                        </a>
+                      </div>
+                      <h5 class="text-black">Coffee Break</h5>
+                      <div class="post-date mb-3">
+                        <a href="#" class="text-osaka text-decoration-none">
+                          <i class="fas fa-calendar-alt me-2"></i>
+
+                          22 June 2018
+                        </a>
+                        <a href="#" class="text-osaka  text-decoration-none">
+                          <i class="fas fa-user me-2"></i>
+                          Robin
+                        </a>
+                      </div>
+                      <p class="card-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget est sit amet sapien
+                        congue
+                        tristique. Integer mollis auctor ultrices. Praesent vitae dapibus elit ... </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="owl-item">
+                  <div class="card shadow">
+                    <div class="card-img  overflow-hidden">
+                      <img src="images/blog/4.jpg" class="card-img-top" alt="">
+
+                    </div>
+                    <div class="card-body p-4 position-relative">
+                      <div class="card-icon position-absolute">
+                        <a href="#"
+                          class="shadow position-absolute bg-white top-50 translate-middle rounded-circle p-3 text-center">
+                          <i class="fas fa-book-open"></i>
+                        </a>
+                      </div>
+                      <h5 class="text-black">Amazing Place</h5>
+                      <div class="post-date mb-3">
+                        <a href="#" class="text-osaka text-decoration-none">
+                          <i class="fas fa-calendar-alt me-2"></i>
+
+                          29 June 2018
+                        </a>
+                        <a href="#" class="text-osaka  text-decoration-none">
+                          <i class="fas fa-user me-2"></i>
+                          Robin
+                        </a>
+                      </div>
+                      <p class="card-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget est sit amet sapien
+                        congue
+                        tristique. Integer mollis auctor ultrices. Praesent vitae dapibus elit ... </p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <p class="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget est sit amet sapien congue
-                tristique. Integer mollis auctor ultrices. Praesent vitae dapibus elit ... </p>
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 pt-0 pt-md-0 pt-sm-5">
-          <div class="card shadow">
-            <div class="card-img  overflow-hidden">
-              <img src="images/blog/2.jpg" class="card-img-top" alt="">
 
-            </div>
-            <div class="card-body p-4 position-relative">
-              <div class="card-icon position-absolute">
-                <a href="#"
-                  class="shadow position-absolute bg-white top-50 translate-middle rounded-circle p-3 text-center">
-                  <i class="fas fa-book-open"></i>
-                </a>
-              </div>
-              <h5 class="text-black">Morning Bike Ride</h5>
-              <div class="post-date mb-3">
-                <a href="#" class="text-osaka text-decoration-none">
-                  <i class="fas fa-calendar-alt me-2"></i>
-
-                  14 May 2018
-                </a>
-                <a href="#" class="text-osaka  text-decoration-none">
-                  <i class="fas fa-user me-2"></i>
-                  Robin
-                </a>
-              </div>
-              <p class="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget est sit amet sapien congue
-                tristique. Integer mollis auctor ultrices. Praesent vitae dapibus elit ... </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 pt-0 pt-md-0 pt-sm-5">
-          <div class="card shadow">
-            <div class="card-img  overflow-hidden">
-              <img src="images/blog/3.jpg" class="card-img-top" alt="">
-
-            </div>
-            <div class="card-body p-4 position-relative">
-              <div class="card-icon position-absolute">
-                <a href="#"
-                  class="shadow position-absolute bg-white top-50 translate-middle rounded-circle p-3 text-center">
-                  <i class="fas fa-book-open"></i>
-                </a>
-              </div>
-              <h5 class="text-black">Morning Bike Ride</h5>
-              <div class="post-date mb-3">
-                <a href="#" class="text-osaka text-decoration-none">
-                  <i class="fas fa-calendar-alt me-2"></i>
-
-                  14 May 2018
-                </a>
-                <a href="#" class="text-osaka  text-decoration-none">
-                  <i class="fas fa-user me-2"></i>
-                  Robin
-                </a>
-              </div>
-              <p class="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget est sit amet sapien congue
-                tristique. Integer mollis auctor ultrices. Praesent vitae dapibus elit ... </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 pt-0 pt-md-0 pt-sm-5">
-          <div class="card shadow">
-            <div class="card-img  overflow-hidden">
-              <img src="images/blog/4.jpg" class="card-img-top" alt="">
-
-            </div>
-            <div class="card-body p-4 position-relative">
-              <div class="card-icon position-absolute">
-                <a href="#"
-                  class="shadow position-absolute bg-white top-50 translate-middle rounded-circle p-3 text-center">
-                  <i class="fas fa-book-open"></i>
-                </a>
-              </div>
-              <h5 class="text-black">Morning Bike Ride</h5>
-              <div class="post-date mb-3">
-                <a href="#" class="text-osaka text-decoration-none">
-                  <i class="fas fa-calendar-alt me-2"></i>
-
-                  14 May 2018
-                </a>
-                <a href="#" class="text-osaka  text-decoration-none">
-                  <i class="fas fa-user me-2"></i>
-                  Robin
-                </a>
-              </div>
-              <p class="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget est sit amet sapien congue
-                tristique. Integer mollis auctor ultrices. Praesent vitae dapibus elit ... </p>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
 
   </section>
 
   <!-- contact-us section -->
-   <section id="contact" class="py-5 bg-black">
+  <section id="contact" class="py-5 bg-black">
     <div
       class="title text-center position-relative py-2 d-flex justify-content-center align-items-center mb-sm-3 mb-md-0">
       <h2 class="text-uppercase mb-0 title-color-dark d-md-block ">get in touch</h2>
@@ -950,7 +841,7 @@
         </div>
       </div>
     </div>
-  </section> 
+  </section>
 
   <!-- footer section -->
   <footer id="footer" class="bg-white py-4">
@@ -964,9 +855,25 @@
       </div>
     </div>
   </footer>
+  <!-- scroll to top button -->
+  <button id="btnUp" class="btn">
+    <i class="fas fa-arrow-alt-circle-up"></i>
+  </button>
+  <!-- loader page -->
+  <section id="loader" class="justify-content-center align-items-center">
+    <div class="spinner">
+      <div class="double-bounce1"></div>
+      <div class="double-bounce2"></div>
+    </div>
+  </section>
 
+  <script src="js/jquery-3.6.0.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/script.js"></script>
+  <script src="plugins/counterUp/js/waypoints.min.js"></script>
+  <script src="plugins/counterUp/js/jquery.counterup.min.js"></script>
+  <script src="plugins/OwlCarousel2-2.3.4/js/owl.carousel.min.js"></script>
+  <script src="plugins/Isotope/isotope.pkgd.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
