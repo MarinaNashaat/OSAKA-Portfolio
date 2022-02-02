@@ -21,7 +21,7 @@ $(document).ready(function () {
             let sectionHeight = $(navLinkAttr).outerHeight();
             let OverAllOffset = offsetOfSec + sectionHeight;
             // if (windowScroll < OverAllOffset && windowScroll >= offsetOfSec) {
-                if(windowScroll>=offsetOfSec && windowScroll< OverAllOffset){
+            if (windowScroll >= offsetOfSec && windowScroll < OverAllOffset) {
                 $(this).addClass('active');
 
             }
@@ -30,36 +30,6 @@ $(document).ready(function () {
 
             }
         })
-
-
-        // if (windowScroll == aboutOffset) {
-        //     $(".nav-item > a[href='#about-me']").addClass('active');
-        //     $(".nav-item > a[href='#about-me'").parent().siblings().find('.nav-link').removeClass('active')
-
-        // }
-        /*  let sectionArray = $('section')
-         // console.log(sectionArray)
-         let height = [];
-         let offsetofSec = [];
-         offsetofSec[0] = $(sectionArray[0]).offset().top
- 
-         for (let i = 1; i < sectionArray.length; i++) {
- 
-             height.push($(sectionArray[i]).outerHeight());
-             offsetofSec[i] = offsetofSec[i-1] + height[i-1];
-             offsetofSec.push(offsetofSec[i]);
-              console.log(offsetofSec[i]);
-             if(windowScroll>=offsetofSec[i]){
-                 console.log("here section",sectionArray[0])
-             }
- 
- 
-         } */
-        // if(windowScroll==offsetofSec[0]){
-        //     console.log("here section",sectionArray[0])
-        // }
-        // console.log(height)
-        // console.log(skillsHeight + skillsOffset)
     });
     /* click mouse section to scroll down */
     $("#mouseScroll").click(function () {
@@ -122,7 +92,7 @@ $(document).ready(function () {
             filter: filterValue
         })
     });
-
+    /* progress counter */
     $(".counter").counterUp({
         delay: 17,
         time: 3000
